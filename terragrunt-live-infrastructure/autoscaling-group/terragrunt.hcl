@@ -12,5 +12,6 @@ dependency "tags" {
 
 
 inputs = {
-  instance_type = "m5.large"
+  instance_type = "t3.micro"
+  enable_monitoring = true
 }
