@@ -6,12 +6,11 @@ include {
   path = find_in_parent_folders()
 }
 
-dependency "aws_tags" {
+dependency "tags" {
   config_path = "../tags"
 }
 
 
 inputs = {
   instance_type = "m5.large"
-  tags = dependency.aws_tags.outputs.tags
 }

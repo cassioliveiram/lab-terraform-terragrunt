@@ -1,5 +1,5 @@
 resource "aws_launch_configuration" "moreira-lab" {
-  name              = var.name
+  name_prefix       = var.name
   image_id          = data.aws_ami.ubuntu.image_id
   instance_type     = var.instance_type
   key_name          = var.key_name
@@ -38,7 +38,7 @@ resource "aws_launch_configuration" "moreira-lab" {
 
 resource "aws_autoscaling_group" "moreira-lab" {
   availability_zones   = ["us-west-2a"]
-  name                 = "asg-moreira-lab"
+  name_prefix          = "asg-moreira-lab"
   launch_configuration = aws_launch_configuration.moreira-lab.name
   max_size             = 2
   min_size             = 1
@@ -47,6 +47,6 @@ resource "aws_autoscaling_group" "moreira-lab" {
     create_before_destroy = true
   }
 
-  tags = var.tags
+  //tags = var.tags
 }
 

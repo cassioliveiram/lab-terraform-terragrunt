@@ -10,7 +10,7 @@ variable "environment" {
 variable "custom_tags" {
   description = "Map containing custom application tags."
   default     = {}
-  type        = map(string)
+  type        = map
 }
 
 variable "app_contact_email" {

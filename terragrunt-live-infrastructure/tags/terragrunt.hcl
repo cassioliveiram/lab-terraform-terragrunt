@@ -11,4 +11,8 @@ inputs = {
   app_contact_email = "cassioliveiram@gmail.com"
   app_cost_center   = "laboratorio"
   app_owner         = "moreira-cassio"
+  custom_tags = {
+    CostSolution = "laboratorio"
+    CostService = "aws"
+  }
 }
