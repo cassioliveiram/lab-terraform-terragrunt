@@ -42,11 +42,10 @@ resource "aws_autoscaling_group" "moreira-lab" {
   launch_configuration = aws_launch_configuration.moreira-lab.name
   max_size             = 2
   min_size             = 1
+  //tags                 = var.tags
 
   lifecycle {
     create_before_destroy = true
   }
-
-  //tags = var.tags
 }
 
