@@ -1,3 +1,9 @@
+variable "region" {
+  description = "AWS Region"
+  default = "us-west-2"
+  type = string
+}
+
 variable "name" {
   description = "The name of resource"
   type = string

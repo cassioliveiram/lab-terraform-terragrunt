@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.region
+}
+
 resource "aws_launch_configuration" "moreira-lab" {
   name_prefix       = var.name
   image_id          = data.aws_ami.ubuntu.image_id
